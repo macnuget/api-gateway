@@ -10,8 +10,9 @@
     "test": "jest src/tests --coverage"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "fastify": "^3.24.0",
-    "pino": "^7.4.1"
+    "fastify-http-proxy": "^6.2.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
