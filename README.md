@@ -10,4 +10,4 @@
 
 ## License
 
-[MIT](https://github.com/macnuget/api-gateway/LICENSE)
+[MIT](https://github.com/macnuget/api-gateway/blob/master/LICENSE)
