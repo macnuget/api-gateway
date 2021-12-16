@@ -6,9 +6,17 @@ const fastify = require("fastify")({
     logger: true,
 })
 
+fastify.decorate('db', require('./decorators/memoryDb'))
+fastify.decorate('jwt', require('./decorators/jwt'))
+
+fastify.register(require('./auth'), { prefix: 'auth' })
+
 fastify.register(require('fastify-autoload'), {
     dir: path.join(__dirname, 'routes'),
-    dirNameRoutePrefix: false
+    dirNameRoutePrefix: false,
+    autoHooks: true,
+    cascadeHookds: true,
+    overwriteHooks: true
 })
 
 try {
